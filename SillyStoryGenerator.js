@@ -38,18 +38,13 @@ function result() {
     var weight = Math.round(300 / 14) + ' stone';
     var temperature =  Math.round((94-32)* (5/9)) + ' centigrade';
 
-    newStory = newStory.replace('94 farenheit', temperature);
-    newStory = newStory.replace('300 pounds', weight);
-
-    // newStory = newStory.replace(/(9)\s(\^f+t$)/, temperature);
-    // newStory = newStory.replace(/\d+\s(\^p\w+s$)/, weight);
+    newStory = newStory.replace(/\d+\s(\w+t)/, temperature);
+    newStory = newStory.replace(/\d+\s(\w+s)/, weight);
   }
 
   story.textContent = newStory;
   story.style.visibility = 'visible';
 }
-
-
 
 function randomValueFromArray(array){
   return array[Math.floor(Math.random()*array.length)];
