@@ -2,8 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <link href="/trancerific.github.io/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="/trancerific.github.io/normalize.css" rel="stylesheet" type="text/css"/>
+    <!--<link href="C:\Users\taraj\projects\trancerific.github.io\reset.css" rel="stylesheet" type="text/css"/>-->
+    <link href="C:\Users\taraj\projects\trancerific.github.io\normalize.css" rel="stylesheet" type="text/css"/>
     <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet"/>
     <title>Guessing</title>
   </head>
@@ -20,21 +20,27 @@
       display: none;
     }
 
+    .instructions {
+      margin: auto;
+      position: relative;
+
+      height: 70px;
+      width: 85%;
+
+    }
+
     .result {
       height: 30px;
       width: 100%;
     }
 
     .results {
-      margin-top: 20px;
+      margin: 20px auto;
       height: 250px;
-      width: 100%;
+      width: 85%;
     }
 
     .wrapper {
-      max-width: 800px;
-      height: 500px;
-      padding: 5px;
       position: absolute;
       left: 50%;
       margin-left: -400px;
@@ -42,10 +48,22 @@
       top: 50%;
       text-align: center;
 
+      height: 500px;
+      max-width: 800px;
+      padding: 5px;
+    
+      border: 2px black;
+      border-radius: 10px;
+      border-style: double groove double groove;
+    }
+
+    body {
+      height: 100%;
     }
 
     html {
      font-family: "Inconsolata", monospace;
+     height: 100%;
     }
 
     </style>
@@ -54,7 +72,9 @@
   		<div class="header">
   			<h1>Number Guessing Game</h1>
   		</div>
-  		<p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+      <div class="instructions">
+  		  <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
+      </div>
   		<div>
   			<label for="guess">
   				Enter your guess
